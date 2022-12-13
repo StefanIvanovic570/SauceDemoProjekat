@@ -1,34 +1,26 @@
 package com.saucedemo.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import static com.saucedemo.constants.Constants.*;
 
 public class CartTests extends BaseTest {
-    private List<String> addedProductsNames = new ArrayList<>();
-    private List<WebElement> confPageProductList = new ArrayList<>();
-    private List<String> confPageProductNamesList = new ArrayList<>();
-
     @Test
     public void addProductToCart() {
-        loginUser("standard_user", "secret_sauce");
-        addProductByName("Sauce Labs Bolt T-Shirt");
+        loginPage.loginStandardUser();
+        loginPage.addProductByName(SAUCE_LABS_BOLT_T_SHIRT);
         loginPage.getBtnCart().click();
-        Assert.assertEquals(cartPage.getListOfProducts().size(), addedProductsNames.size());
+        Assert.assertEquals(cartPage.getListOfProducts().size(), loginPage.getAddedProductsNames().size());
     }
 
     @Test
     public void goToCheckout() {
-        loginUser("standard_user", "secret_sauce");
-        addProductByName("Sauce Labs Bolt T-Shirt");
+        loginPage.loginStandardUser();
+        loginPage.addProductByName(SAUCE_LABS_BACKPACK);
         loginPage.getBtnCart().click();
         cartPage.getBtnCheckout().click();
-        fillCheckoutInformation("Test", "Test", "1337");
+        checkoutStepOne.fillCheckoutInformation();
         checkoutStepOne.getBtnContinue().click();
         Assert.assertTrue(checkoutStepTwo.getBtnFinish().isDisplayed());
     }
@@ -42,66 +34,30 @@ public class CartTests extends BaseTest {
 
     @Test
     public void verifyMultiplePurchase() {
-        addedProductsNames.clear();
-        loginUser("standard_user", "secret_sauce");
-        addProductByName("Sauce Labs Bolt T-Shirt");
-        addProductByName("Sauce Labs Onesie");
-        addProductByName("Test.allTheThings() T-Shirt (Red)");
+        loginPage.getAddedProductsNames().clear();
+        loginPage.loginStandardUser();
+        loginPage.addProductByName(SAUCE_LABS_BOLT_T_SHIRT);
+        loginPage.addProductByName(SAUCE_LAB_ONESIE);
+        loginPage.addProductByName(TEST_ALLTHETHINGS_T_SHIRT_RED);
         loginPage.getBtnCart().click();
         cartPage.getBtnCheckout().click();
-        fillCheckoutInformation("Test", "Test", "1337");
+        checkoutStepOne.fillCheckoutInformation();
         checkoutStepOne.getBtnContinue().click();
-        Assert.assertTrue(assertProductList());
+        Assert.assertTrue(loginPage.assertProductList());
     }
 
     @Test
     public void removeProductFromCart() {
-        addedProductsNames.clear();
-        loginUser("standard_user", "secret_sauce");
-        addProductByName("Sauce Labs Bolt T-Shirt");
-        addProductByName("Sauce Labs Fleece Jacket");
-        addProductByName("Sauce Labs Bike Light");
+        loginPage.getAddedProductsNames().clear();
+        loginPage.loginStandardUser();
+        loginPage.addProductByName(SAUCE_LABS_BOLT_T_SHIRT);
+        loginPage.addProductByName(SAUCE_LABS_FLEECE_JACKET);
+        loginPage.addProductByName(SAUCE_LABS_BIKE_LIGHT);
         loginPage.getBtnCart().click();
-        Assert.assertEquals(cartPage.getListOfProducts().size(), addedProductsNames.size());
+        Assert.assertEquals(cartPage.getListOfProducts().size(), loginPage.getAddedProductsNames().size());
         cartPage.getBtnContinueShopping().click();
-        removeAddedProducts();
+        loginPage.removeAddedProducts();
         loginPage.getBtnCart().click();
         Assert.assertEquals(cartPage.getListOfProducts().size(), 0);
-    }
-
-    public void loginUser(String username, String password) {
-        loginPage.openLoginPage();
-        loginPage.getFieldUsername().sendKeys(username);
-        loginPage.getFieldPassword().sendKeys(password);
-        loginPage.getBtnLogin().click();
-    }
-
-    public void addProductByName(String productName) {
-        addedProductsNames.add(loginPage.getAddedProductName(productName));
-        loginPage.getBtnAddProductToCartByName(productName).click();
-    }
-
-    public void fillCheckoutInformation(String firstName, String lastName, String zipCode) {
-        checkoutStepOne.getFieldFirstName().sendKeys(firstName);
-        checkoutStepOne.getFieldLastName().sendKeys(lastName);
-        checkoutStepOne.getFieldZipCode().sendKeys(zipCode);
-    }
-
-    public boolean assertProductList() {
-        confPageProductList = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
-        for (int i = 0; i < confPageProductList.size(); i++) {
-            confPageProductNamesList.add(confPageProductList.get(i).getText());
-        }
-        Collections.sort(confPageProductNamesList);
-        Collections.sort(addedProductsNames);
-
-        return confPageProductNamesList.equals(addedProductsNames);
-
-    }
-
-    public void removeAddedProducts() {
-        for (String productName : addedProductsNames) {
-            driver.findElement(By.xpath("//div[contains(text(),'" + productName + "')]" + "/../../..//button")).click();
-        }
     }
 }

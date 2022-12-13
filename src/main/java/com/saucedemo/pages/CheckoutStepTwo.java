@@ -13,4 +13,5 @@ public class CheckoutStepTwo extends BasePage {
     public WebElement getBtnFinish() {
         return driver.findElement(By.id("finish"));
     }
+
 }

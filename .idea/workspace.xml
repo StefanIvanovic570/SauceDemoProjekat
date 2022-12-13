@@ -7,18 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16f55aa0-b21d-4403-a7e9-05a325be58b5" name="Changes" comment="added login tests">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CartTests.java" afterDir="false" />
+    <list default="true" id="16f55aa0-b21d-4403-a7e9-05a325be58b5" name="Changes" comment="added remove test, multiple purchase test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CartTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="update" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669761940409</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added remove test, multiple purchase test">
+      <created>1670913794747</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670913794747</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,7 +102,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="update" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -103,6 +124,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="added login tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login tests" />
+    <MESSAGE value="added remove test, multiple purchase test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added remove test, multiple purchase test" />
   </component>
 </project>

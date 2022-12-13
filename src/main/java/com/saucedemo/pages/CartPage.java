@@ -19,7 +19,8 @@ public class CartPage extends BasePage {
     public List<WebElement> getListOfProducts() {
         return driver.findElements(By.xpath("//div[@class='cart_item']"));
     }
-    public WebElement getBtnContinueShopping(){
+
+    public WebElement getBtnContinueShopping() {
         return driver.findElement(By.id("continue-shopping"));
     }
 }
