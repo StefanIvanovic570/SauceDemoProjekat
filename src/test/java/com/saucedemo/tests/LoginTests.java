@@ -11,12 +11,13 @@ public class LoginTests extends BaseTest {
         loginPage.getFieldUsername().sendKeys("standard_user");
         loginPage.getFieldPassword().sendKeys("secret_sauce");
         loginPage.getBtnLogin().click();
-        loginPage.waitBtnCart();
+        loginPage.waitWebElementVisible(loginPage.getBtnCart());
 
         Assert.assertTrue(loginPage.getBtnCart().isDisplayed());
     }
+
     @Test
-    public void wrongPasswordLoginTest(){
+    public void wrongPasswordLoginTest() {
         loginPage.openLoginPage();
 
         loginPage.getFieldUsername().sendKeys("standard_user");
@@ -26,6 +27,7 @@ public class LoginTests extends BaseTest {
         loginPage.waitErrorMessageLockedOut();
         Assert.assertTrue(loginPage.getErrorLoginMessage().isDisplayed());
     }
+
     @Test
     public void lockedOutUserLoginTest() {
         loginPage.openLoginPage();
