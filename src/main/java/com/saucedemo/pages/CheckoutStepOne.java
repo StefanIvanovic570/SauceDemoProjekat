@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static com.saucedemo.constants.Constants.*;
-
 public class CheckoutStepOne extends BasePage {
 
     public CheckoutStepOne(WebDriver driver) {
@@ -28,9 +26,9 @@ public class CheckoutStepOne extends BasePage {
         return driver.findElement(By.id("continue"));
     }
 
-    public void fillCheckoutInformation() {
-        getFieldFirstName().sendKeys(CHCK_INFO_FIRST_NAME);
-        getFieldLastName().sendKeys(CHCK_INFO_LAST_NAME);
-        getFieldZipCode().sendKeys(CHCK_INFO_ZIP_CODE);
+    public void fillCheckoutInformation(String firstName, String lastName, String zipCode) {
+        getFieldFirstName().sendKeys(firstName);
+        getFieldLastName().sendKeys(lastName);
+        getFieldZipCode().sendKeys(zipCode);
     }
 }
