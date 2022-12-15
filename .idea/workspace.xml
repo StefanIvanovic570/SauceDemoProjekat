@@ -7,26 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16f55aa0-b21d-4403-a7e9-05a325be58b5" name="Changes" comment="simplify, add beauty, much improve">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login_tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/InventoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/AddProductToCartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckOutSummaryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckoutTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginLockedOutUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginWrongPasswordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/MultiplePurchaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/RemoveProductsFromCartTest.java" afterDir="false" />
+    <list default="true" id="16f55aa0-b21d-4403-a7e9-05a325be58b5" name="Changes" comment="updated code with comments in mind">
+      <change afterPath="$PROJECT_DIR$/regressionTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/CheckoutStepTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/InventoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CartTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginStandardUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/AddProductToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/AddProductToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckOutSummaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckOutSummaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/CanGoToCheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginLockedOutUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginLockedOutUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginStandardUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginStandardUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginWrongPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/LoginWrongPasswordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/MultiplePurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/MultiplePurchaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/RemoveProductsFromCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/RemoveProductsFromCartTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +54,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.saucedemo.tests" />
@@ -117,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670929867450</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated code with comments in mind">
+      <created>1671002076828</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671002076828</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +151,7 @@
     <MESSAGE value="added login tests" />
     <MESSAGE value="added remove test, multiple purchase test" />
     <MESSAGE value="simplify, add beauty, much improve" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplify, add beauty, much improve" />
+    <MESSAGE value="updated code with comments in mind" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated code with comments in mind" />
   </component>
 </project>

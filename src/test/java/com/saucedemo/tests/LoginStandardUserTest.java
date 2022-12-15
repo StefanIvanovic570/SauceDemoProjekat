@@ -7,11 +7,11 @@ import static com.saucedemo.constants.Constants.STANDARD_USERNAME;
 import static com.saucedemo.constants.Constants.STANDARD_PASSWORD;
 
 public class LoginStandardUserTest extends BaseTest {
-    @Test(groups = {"login_tests"})
+    @Test
     public void standardUserLoginTest() {
         loginPage.openLoginPage();
         loginPage.loginUser(STANDARD_USERNAME, STANDARD_PASSWORD);
-        loginPage.waitWebElementVisible(loginPage.getBtnCart());
-        Assert.assertTrue(loginPage.getBtnCart().isDisplayed());
+        loginPage.waitWebElementVisible(inventoryPage.getBtnCart());
+        Assert.assertTrue(inventoryPage.getBtnCart().isDisplayed());
     }
 }

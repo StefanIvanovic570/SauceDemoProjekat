@@ -16,11 +16,11 @@ public class RemoveProductsFromCartTest extends BaseTest {
         inventoryPage.addProductByName(SAUCE_LABS_BOLT_T_SHIRT);
         inventoryPage.addProductByName(SAUCE_LABS_FLEECE_JACKET);
         inventoryPage.addProductByName(SAUCE_LABS_BIKE_LIGHT);
-        loginPage.getBtnCart().click();
+        inventoryPage.getBtnCart().click();
         Assert.assertEquals(inventoryPage.getAddedProductNameStringList().size(), cartPage.getListOfProducts().size());
         cartPage.getBtnContinueShopping().click();
         inventoryPage.removeAddedProducts();
-        loginPage.getBtnCart().click();
+        inventoryPage.getBtnCart().click();
         Assert.assertEquals(cartPage.getListOfProducts().size(), 0);
     }
 }

@@ -16,7 +16,7 @@ public class CanGoToCheckOutSummaryTest extends BaseTest{
     public void canGoToCheckOutSummaryTest() {
         loginPage.loginUser(STANDARD_USERNAME, STANDARD_PASSWORD);
         inventoryPage.addProductByName(SAUCE_LABS_BACKPACK);
-        loginPage.getBtnCart().click();
+        inventoryPage.getBtnCart().click();
         cartPage.getBtnCheckout().click();
         checkoutStepOne.fillCheckoutInformation(CHCK_INFO_FIRST_NAME, CHCK_INFO_LAST_NAME, CHCK_INFO_ZIP_CODE);
         checkoutStepOne.getBtnContinue().click();

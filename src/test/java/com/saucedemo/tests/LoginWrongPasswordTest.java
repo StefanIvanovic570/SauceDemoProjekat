@@ -7,7 +7,7 @@ import static com.saucedemo.constants.Constants.STANDARD_USERNAME;
 import static com.saucedemo.constants.Constants.WRONG_PASSWORD;
 
 public class LoginWrongPasswordTest extends BaseTest {
-    @Test(groups = { "login_tests" })
+    @Test
     public void wrongPasswordLoginTest() {
         loginPage.loginUser(STANDARD_USERNAME, WRONG_PASSWORD);
         loginPage.waitErrorMessageLockedOut();

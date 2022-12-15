@@ -20,7 +20,7 @@ public class MultiplePurchaseTest extends BaseTest {
         inventoryPage.addProductByName(SAUCE_LABS_BOLT_T_SHIRT);
         inventoryPage.addProductByName(SAUCE_LAB_ONESIE);
         inventoryPage.addProductByName(TEST_ALLTHETHINGS_T_SHIRT_RED);
-        loginPage.getBtnCart().click();
+        inventoryPage.getBtnCart().click();
         cartPage.getBtnCheckout().click();
         checkoutStepOne.fillCheckoutInformation(CHCK_INFO_FIRST_NAME, CHCK_INFO_LAST_NAME, CHCK_INFO_ZIP_CODE);
         checkoutStepOne.getBtnContinue().click();

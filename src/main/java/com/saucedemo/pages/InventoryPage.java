@@ -21,7 +21,9 @@ public class InventoryPage extends BasePage{
     public WebElement getBtnAddProductToCartByName(String productName) {
         return driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]/../../..//button", productName)));
     }
-
+    public WebElement getBtnCart() {
+        return driver.findElement(By.id("shopping_cart_container"));
+    }
     public String getAddedProductName(String productName) {
         return driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]", productName))).getText();
     }

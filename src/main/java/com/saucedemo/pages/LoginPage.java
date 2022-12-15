@@ -14,7 +14,6 @@ public class LoginPage extends BasePage {
     }
 
 
-
     public void openLoginPage() {
         driver.get("https://www.saucedemo.com/");
     }
@@ -23,18 +22,12 @@ public class LoginPage extends BasePage {
         return driver.findElement(By.id("user-name"));
     }
 
-
-
     public WebElement getFieldPassword() {
         return driver.findElement(By.id("password"));
     }
 
     public WebElement getBtnLogin() {
         return driver.findElement(By.id("login-button"));
-    }
-
-    public WebElement getBtnCart() {
-        return driver.findElement(By.id("shopping_cart_container"));
     }
 
     public WebElement getErrorLoginMessage() {
