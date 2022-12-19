@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CheckoutStepTwo extends BasePage {
-
     public CheckoutStepTwo(WebDriver driver) {
         super(driver);
     }

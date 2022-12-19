@@ -25,4 +25,10 @@ public class CheckoutStepOne extends BasePage {
     public WebElement getBtnContinue() {
         return driver.findElement(By.id("continue"));
     }
+
+    public void fillCheckoutInformation(String firstName, String lastName, String zipCode) {
+        getFieldFirstName().sendKeys(firstName);
+        getFieldLastName().sendKeys(lastName);
+        getFieldZipCode().sendKeys(zipCode);
+    }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test">
+    <test name="Functional Testing">
+
+        <classes>
+            <class name="com.saucedemo.tests.LoginLockedOutUserTest"/>
+            <class name="com.saucedemo.tests.LoginStandardUserTest"/>
+            <class name="com.saucedemo.tests.LoginWrongPasswordTest"/>
+
+            <class name="com.saucedemo.tests.CanGoToCheckOutSummaryTest"/>
+            <class name="com.saucedemo.tests.CanGoToCheckoutTest"/>
+
+            <class name="com.saucedemo.tests.AddProductToCartTest"/>
+            <class name="com.saucedemo.tests.RemoveProductsFromCartTest"/>
+            <class name="com.saucedemo.tests.MultiplePurchaseTest"/>
+        </classes>
+
+    </test>
+
+</suite>
+

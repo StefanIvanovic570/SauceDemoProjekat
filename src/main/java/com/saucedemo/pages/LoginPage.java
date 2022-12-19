@@ -10,19 +10,13 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+
     public void openLoginPage() {
         driver.get("https://www.saucedemo.com/");
     }
 
     public WebElement getFieldUsername() {
         return driver.findElement(By.id("user-name"));
-    }
-
-    public WebElement getBtnAddProductToCartByName(String productName) {
-        return driver.findElement(By.xpath("//div[contains(text(),'" + productName + "')]" + "/../../..//button"));
-    }
-    public String getAddedProductName(String productName){
-        return driver.findElement(By.xpath("//div[contains(text(),'" + productName + "')]")).getText();
     }
 
     public WebElement getFieldPassword() {
@@ -33,15 +27,18 @@ public class LoginPage extends BasePage {
         return driver.findElement(By.id("login-button"));
     }
 
-    public WebElement getBtnCart() {
-        return driver.findElement(By.id("shopping_cart_container"));
-    }
-
     public WebElement getErrorLoginMessage() {
         return driver.findElement(By.xpath("//h3[contains(@data-test, 'error')]"));
     }
 
     public void waitErrorMessageLockedOut() {
         wait.until(ExpectedConditions.visibilityOf(getErrorLoginMessage()));
+    }
+
+    public void loginUser(String username, String password) {
+        openLoginPage();
+        getFieldUsername().sendKeys(username);
+        getFieldPassword().sendKeys(password);
+        getBtnLogin().click();
     }
 }
