@@ -8,33 +8,39 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class InventoryPage extends BasePage{
+public class InventoryPage extends BasePage {
 
     public InventoryPage(WebDriver driver) {
         super(driver);
     }
+
     private List<String> addedProductNameStringList = new ArrayList<>();
 
     public List<String> getAddedProductNameStringList() {
         return addedProductNameStringList;
     }
-    public WebElement getBtnAddProductToCartByName(String productName) {
-        return driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]/../../..//button", productName)));
+
+    public WebElement getBtnAddProductToCartByID(String productID) {
+        return driver.findElement(By.id(productID));
     }
+
     public WebElement getBtnCart() {
         return driver.findElement(By.id("shopping_cart_container"));
     }
-    public String getAddedProductName(String productName) {
-        return driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]", productName))).getText();
+
+    public String getAddedProductName(String productID) {
+        return (driver.findElement(By.xpath(String.format("//button[@id='%s']", productID))).getAttribute("id")).substring(12);
     }
-    public void addProductByName(String productName) {
-        addedProductNameStringList.add(getAddedProductName(productName));
+
+    public void addProductByID(String productID) {
+        addedProductNameStringList.add(getAddedProductName(productID));
         Collections.sort(addedProductNameStringList);
-        getBtnAddProductToCartByName(productName).click();
+        getBtnAddProductToCartByID(productID).click();
     }
+
     public void removeAddedProducts() {
-        for (String productName : addedProductNameStringList) {
-            driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]/../../..//button", productName))).click();
+        for (String productID : addedProductNameStringList) {
+            driver.findElement(By.xpath(String.format("//button[@id='remove-%s']", productID))).click();
         }
     }
 }

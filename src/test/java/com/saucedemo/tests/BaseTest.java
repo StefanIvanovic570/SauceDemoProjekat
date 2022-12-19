@@ -15,6 +15,7 @@ public class BaseTest {
     protected CheckoutStepOne checkoutStepOne;
     protected CheckoutStepTwo checkoutStepTwo;
     protected CheckoutStepThree checkoutStepThree;
+
     @BeforeClass
     public void classSetup() {
         WebDriverManager.chromedriver().setup();
